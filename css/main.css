@@ -1,7 +1,7 @@
 @import url(./components/nav.css);
 @import url(./components/footer.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
   --white: #fff;
@@ -19,16 +19,18 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   min-width: 300px;
 }

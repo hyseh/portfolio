@@ -1,7 +1,13 @@
 .section-title {
   font-size: 0.75rem;
-  font-weight: normal;
+  font-weight: 400;
   text-transform: uppercase;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 hr {
@@ -27,12 +33,13 @@ hr {
 .hero-title__primary {
   font-size: 2rem;
   font-size: clamp(2rem, 1.5rem + 2.2222vw, 3rem);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .hero-title__secondary {
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 1.2rem + 1.3333vw, 2rem);
+  font-weight: 600;
 }
 
 .hero-desc {
@@ -65,7 +72,7 @@ hr {
 
 .hero-button span {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .hero-button:hover,
@@ -86,10 +93,8 @@ hr {
   max-width: 1280px;
 }
 
-.flex-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.grid-wrapper {
+  display: grid;
   gap: 20px;
 }
 
@@ -120,12 +125,20 @@ hr {
 .project-info__container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
+
+.project-info__wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.project-info__title {
+.project-info__heading {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .project-links {
@@ -158,7 +171,7 @@ hr {
   background-color: var(--white);
 }
 
-@media only screen and (min-width: 840px) {
+@media only screen and (min-width: 780px) {
   .hero {
     margin: 20px;
   }
@@ -168,7 +181,15 @@ hr {
     max-height: 800px;
   }
 
-  .flex-wrapper__projects {
-    flex-direction: row;
+  .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
   }
 }
